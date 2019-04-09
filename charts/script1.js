@@ -53,56 +53,27 @@ function changeChart2(){
 }
 
  // // -------------- dropdown -------------------------
-// var dropdown_year = document.getElementById('year1');
-// dropdown_year.onclick = function(){
-//
-// 	fetch('data.json') // get the data
-// 		.then( function(response) {
-// 			return response.json(); // transform the data
-// 		})
-// 		.then(function(data) {
-// 			console.log('data', data)}
-//     )
-// }
 
-//https://stackoverflow.com/questions/23439324/select-and-display-one-chart-using-dropdown-menu
+function getSelectValue(){
+  var selectedValue = document.getElementById('dropdown_year1').value;
+  console.log(selectedValue);
+}
 
-// <select id="leave" onchange="leaveChange()">
-//   <option value="1">Second</option>
-//   <option value="2">First</option>
-//
-// </select>
 
-// function leaveChange() {
-//     if (document.getElementById("dropdown_year").value != "1"){
-//  document.getElementById("myChart").data="myChart";
-//     }
-//     else{
-//         document.getElementById("myCHart1").data="myChart";
-//     }
-// }
 
-// ---------------logic: if onclick(year1) = canvas.myChart , if onnclick(year2)= canvas.myCHart.data1----------
-// var dropdown_year = document.getElementById('dropdown_year'); // target the button
-// dropdown_year.onclick = function () { // click the button
-//   if (dropdown_year.value ="1"){
-//   return chart;
-//
-// } if else (dropdown_year.value ="2"){
-//   return chart1;
-// }
-// }
-// ;
 
-// my chart is still not correct
-// var dropdown_year = document.getElementById('myChart');
-// function blueChart(){
-//   dropdown_year.setAttribute("id","myChart");
-// };
-//
-// function pinkChart(){
-//   dropdown_year.setAttribute("id","myChart1");
-// };
+var dropdown_year = document.getElementById('year1');
+dropdown_year.onclick = function(){
+
+	fetch('http://127.0.0.1:8080/data.json') // get the data
+		.then( function(response) {
+			return response.json(); // transform the data
+		})
+		.then(function(data) {
+			console.log('data', data)}
+    )
+}
+
 
 // -CLUSTER _--------------------------------
 

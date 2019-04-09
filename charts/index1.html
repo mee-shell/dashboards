@@ -10,28 +10,27 @@
 	</head>
 	<body>
 
-<h1> Chart test: filled line graph </h1>
+<h1> Chart test: filled line </h1>
 <!-- buttons add data  -->
 <button onclick="changeChart()">Add new data point</button>
-<!--  not working yet -->
 <button onclick="removeDataPoint()">delete Data point</button>
 <button onclick="changeChart1()">replace with new data</button>
 <button onclick="changeChart2()">new chart content</button>
 
 
-<select id="dropdown_year" >
+<!-- <select id="dropdown_year" >
     <option value="" disabled="disabled" selected="selected">Select a year</option>
     <option value="1" id="year1" onclick="changeChart()">add a data point</option>
     <option value="2"id="year2" onclick="removeDataPoint()">delete a data point</option>
-</select>
+</select> -->
 
 
-<!-- test  -->
+<!-- test dropdown  -->
 
-<select id="dropdown_year" >
+<select id="dropdown_year1" onchange="getSelectValue()" >
     <option value="" disabled="disabled" selected="selected">Data points</option>
-    <option value="1" id="year1" onclick="changeChart()">add a data point</option>
-    <option value="2"id="year2" onclick="removeDataPoint()">delete a data point</option>
+    <option value="add" id="year1" onclick="changeChart()">add a data point</option>
+    <option value="remove"id="year2" onclick="removeDataPoint()">delete a data point</option>
 </select>
 
 <!-- canvas 1 chart  -->
