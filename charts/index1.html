@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Charts</title>
+		<link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<script src="min.js"></script>
+		<script src="utils.js"></script>
+	</head>
+	<body>
+
+<h1> Chart test: filled line graph </h1>
+
+		<!-- Dropdown Menue-->
+    <!-- <button id="year1">yyy</button> -->
+
+
+<select type="button" id="dropdown_year">
+    <option value="" disabled="disabled" selected="selected">Select a year</option>
+    <option value="1" id="year1">2019</option>
+    <option value="2"id="year2">2018</option>
+</select>
+
+<!-- canvas 1 chart  -->
+<canvas id="myChart"></canvas>
+<br>
+<canvas id="myChart1"></canvas>
+
+<!-- cluster chart just copy pasted code  -->
+	<h1> Chart test 2: cluster </h1>
+<div class="content">
+	<div class="wrapper"><canvas id="chart-0"></canvas></div>
+	<div class="toolbar">
+		<button onclick="randomize(this)">Randomize</button>
+		<button onclick="addDataset(this)">Add Dataset</button>
+		<button onclick="removeDataset(this)">Remove Dataset</button>
+	</div>
+</div>
+
+
+		<script src="script1.js"></script>
+	</body>
+</html>
