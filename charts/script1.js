@@ -19,35 +19,28 @@ var chart = new Chart(ctx, {
     },
 });
 
-var ctx = document.getElementById('myChart1').getContext('2d');
-var chart1 = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
+function changeChart(){
+  chart.data.datasets[0].data[7]=30;
+  chart.data.labels[7]="Newly added";
+  chart.update();
+};
+// not working yet: 
+function removeDataPoint(){
+chart.data.datasets[0].data.pop();
+chart.update;
+} ;
 
-    // The data for our dataset
-    data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'My Second dataset',
-            backgroundColor: 'rgb(205, 99, 132)',
-            borderColor: 'rgb(205, 99, 132)',
-            data: [4, 3, 10, 2, 10, 30, 15]
-        }]
-    },
-});
-// several attempts to get the dropdown menue or a button to work... not working yet
+function changeChart1(){
+  chart.data.datasets[0].data[7]=30;
+  chart.data.label="My second dataset";
+  chart.data.backgroundColor='rgb(155, 9, 132)';
+  chart.data.datasets[0].data=[5, 1, 20, 2, 10, 10, 15];
+  chart.update();
+};
 
-// // ----- button toggle -------------
-// var button_toggle = document.getElementById('year1');
-// button_toggle.onclick = function() {
-// 	title.classList.toggle('year2');
-// };
-//
-//
-// // // -------------- dropdown -------------------------
- //  with json file, wasnt working, so called data is included in js
-// var dropdown_year1 = document.getElementById('year1');
-// dropdown_year1.onclick = function(){
+ // // -------------- dropdown -------------------------
+// var dropdown_year = document.getElementById('year1');
+// dropdown_year.onclick = function(){
 //
 // 	fetch('data.json') // get the data
 // 		.then( function(response) {
@@ -57,21 +50,6 @@ var chart1 = new Chart(ctx, {
 // 			console.log('data', data)}
 //     )
 // }
-//
-// var dropdown_year2 = document.getElementById('year2');
-// dropdown_year2.onclick = function(){
-//
-// 	fetch('data.json') // get the data
-// 		.then( function(response) {
-// 			return response.json(); // transform the data
-// 		})
-// 		.then(function(data) {
-// 			console.log('data', data)}
-//     )
-// }
-
-
-
 
 //https://stackoverflow.com/questions/23439324/select-and-display-one-chart-using-dropdown-menu
 
@@ -102,8 +80,15 @@ var chart1 = new Chart(ctx, {
 // }
 // ;
 
-
-
+// my chart is still not correct
+// var dropdown_year = document.getElementById('myChart');
+// function blueChart(){
+//   dropdown_year.setAttribute("id","myChart");
+// };
+//
+// function pinkChart(){
+//   dropdown_year.setAttribute("id","myChart1");
+// };
 
 // -CLUSTER _--------------------------------
 
