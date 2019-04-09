@@ -15,7 +15,9 @@ var chart = new Chart(ctx, {
             backgroundColor: 'rgb(55, 99, 132)',
             borderColor: 'rgb(55, 99, 132)',
             data: [0, 10, 5, 2, 20, 30, 45]
-        }]
+        },
+
+      ]
     },
 });
 
@@ -24,19 +26,31 @@ function changeChart(){
   chart.data.labels[7]="Newly added";
   chart.update();
 };
-// not working yet: 
+
 function removeDataPoint(){
 chart.data.datasets[0].data.pop();
-chart.update;
+chart.data.labels.pop();
+chart.update();
 } ;
 
 function changeChart1(){
   chart.data.datasets[0].data[7]=30;
   chart.data.label="My second dataset";
-  chart.data.backgroundColor='rgb(155, 9, 132)';
   chart.data.datasets[0].data=[5, 1, 20, 2, 10, 10, 15];
+  chart.data.datasets[0].backgroundColor= 'rgb(155, 99, 132)';
+  chart.data.datasets[0].borderColor= 'rgb(155, 99, 132)';
   chart.update();
 };
+
+function changeChart2(){
+  chart.data.datasets=[{
+    label: 'My new chart',
+    backgroundColor: 'rgb(255, 99, 132)',
+    borderColor: 'rgb(255, 99, 132)',
+    data: [10, 20, 15, 10, 10, 20, 15]
+ }];
+ chart.update();
+}
 
  // // -------------- dropdown -------------------------
 // var dropdown_year = document.getElementById('year1');
